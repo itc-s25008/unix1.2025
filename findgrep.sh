@@ -1,5 +1,6 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 pattern=$1
 directory=$2
 name=$3
@@ -18,4 +19,15 @@ fi
 
 # -n : print line number
 # -H : print the file name
+=======
+
+pattern=$1
+directory=$2
+if [ -z "$directory" ]; then
+	directory='.'
+fi
+if [ -z "$name" ]; then
+	name='*'
+fi
+>>>>>>> 7f076684adf3a7e6f3db2bb255dfbb079e935d2a
 find "$directory" -type f  -name "$name" | xargs grep -nH "$pattern"
