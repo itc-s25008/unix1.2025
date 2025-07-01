@@ -9,4 +9,4 @@ fi
 if [ -z "$name" ]; then
 	name='*'
 fi
-find . -type f | xargs grep -nH "$pattern"
+find "$directory" -type f  -name "$name" | xargs grep -nH "$pattern"
